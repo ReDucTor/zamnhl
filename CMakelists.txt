@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.0.0)
+
+project(zamnhl)
+
+if(NOT CMAKE_SIZEOF_VOID_P EQUAL 4)
+	message(FATAL_ERROR "Please switch to 32-bit build. bits= ${CMAKE_SIZEOF_VOID_P}")
+	return()
+endif()
+
+add_subdirectory(cl_dll)
+add_subdirectory(dlls)
